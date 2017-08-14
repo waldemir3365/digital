@@ -9,11 +9,10 @@ import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
 
 @Entity
-@SequenceGenerator(name="seqCliente",sequenceName="SQ_CLIENTE",allocationSize=1)
 public class Cliente {
 
 	@Id
-	@GeneratedValue(strategy=GenerationType.SEQUENCE,generator="seqCliente")
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int codigo;
 	
 	private String nome;
